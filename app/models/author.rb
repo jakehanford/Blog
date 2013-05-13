@@ -4,6 +4,8 @@ class Author < ActiveRecord::Base
   has_many :posts
   	validates_presence_of :name, :email, :password
   	validates :name, presence: true, uniqueness: true, length: { maximum: 40 } 
+  	validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
+
 
 
 
