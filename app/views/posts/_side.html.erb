@@ -9,17 +9,21 @@
       </div>
       </div>
     <div class="well">
-  <ul class="nav nav-list">
-
-    <li class="nav-header">More Topics</li>
+  <ul class="nav nav-pills nav-stacked">
+    <li class="nav-header">Blog Posts</li>
     <li class="active"><a href="#">Home</a></li>
-    <li>Filler</li>
-    <li>Filler</li>
-    <li>Filler</li>
-    <li>Filler</li>
+    <% @posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+    <% end -%>
+    
   </ul>
   </div>
   <div class="well">
-    <h5>Social</h5>
+    <ul class="nav nav-pills nav-stacked">
+    <li class="nav-header">Get in touch</li>
+      <li><a href="https://twitter.com/jackhanford">twitter</a></li>
+      <li><a href="https://facebook.com/jackhanford">facebook</a></li>
+      <li><a href="https://github.com/jackhanford">github</a></li>
+
   </div>
 </div>
