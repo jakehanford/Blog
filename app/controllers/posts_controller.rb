@@ -80,11 +80,4 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-    before_filter :incriment_number
-
-  def incriment_number
-    @number = rand 0..10
-    
-  end
-
 end

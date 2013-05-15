@@ -1,5 +1,17 @@
 <%= render 'side' %>
+<div class="span10">
 <h3>My Posts</h3>
+
+<% @posts.each do |post| %>
+<div class="limit">
+  <div class="boxx">
+  <p class="text-info"><big><%= post.title %> by <%= post.name %></big></p>
+  <p class="muted"><%= post.content%></p>
+</div>
+</div>
+<% end -%>
+
+<!--
 <table>
   <tr>
     <th>Author</th>
@@ -21,8 +33,5 @@
   </tr>
 <% end %>
 </table>
-
-<h1>Number of method calls!!: <%= @number %></h1>
-
 <br />
-
+-->
