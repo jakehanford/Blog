@@ -1,5 +1,7 @@
 PostingApp::Application.routes.draw do
 
+  devise_for :authors
+
   resources :authors
 
   resources :posts do
