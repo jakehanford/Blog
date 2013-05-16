@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
-  before_filter :authenticate_user!
+  before_filter :authenticate_author!
 
   def index
     @posts = Post.all
