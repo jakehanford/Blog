@@ -1,12 +1,12 @@
 <%= render 'side' %>
 <div class="span10">
-<h3>My Posts</h3>
+<h3 class="text-info">My Posts</h3>
 
 <% @posts.each do |post| %>
 <div class="limit">
   <div class="boxx">
   <p class="text-info"><big><%= post.title %> by <%= post.name %></big></p>
-  <p class="muted"><%= post.content%></p>
+  <p class="muted"><%= post.content%> <b><%= link_to 'Read more', post %></b></p>
 </div>
 </div>
 <% end -%>
